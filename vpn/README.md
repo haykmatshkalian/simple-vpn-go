@@ -141,6 +141,12 @@ ping 10.2.0.1
 ping 10.2.0.2
 ```
 
+
+### If ping fails run this inside the client (macOS)
+```bash
+sudo route add 10.2.0.0/24 -interface <interface-name>
+```
+
 If both work:
 
 🎉 **Your Go VPN is working!**
