@@ -33,10 +33,8 @@ After setup, both sides can **ping each other through VPN**.
 ## 📁 File Structure
 
 ```
-vpn-server/
-  server.go
-vpn-client/
-  client.go
+vpn_server.go
+vpn_client.go
 ```
 
 ---
@@ -69,16 +67,10 @@ go get github.com/songgao/water
 
 ## 🖥️ SERVER SETUP (KALI)
 
-Go into the server directory:
-
-```bash
-cd vpn-server
-```
-
 Build the server:
 
 ```bash
-go build -o vpnServer server.go
+go build -o vpnServer vpn_server.go
 ```
 
 Run the server as root:
@@ -99,16 +91,11 @@ Server listening on :8000
 
 ## 💻 CLIENT SETUP (macOS)
 
-Go into client folder:
-
-```bash
-cd vpn-client
-```
 
 Build the client:
 
 ```bash
-go build -o vpnClient client.go
+go build -o vpnClient vpn_client.go
 ```
 
 Run client as root with server IP and port flags:
